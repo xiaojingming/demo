@@ -1,0 +1,56 @@
+{
+  "name": "my-h5-panel",
+  "version": "0.1.0",
+  "description": "Awesome h5-panel apps.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node scripts/dev.mjs --productId=ODDTMLFYY4",
+    "build": "rimraf ./.parcel-cache && rimraf ./dist && npx parcel build src/index.js",
+    "release": "npm run build"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "alias": {
+    "qcloud-iotexplorer-h5-panel-sdk": {
+      "global": "h5PanelSdk"
+    },
+    "process": false
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "pinia": "^2.0.14",
+    "qcloud-iotexplorer-bluetooth-adapter-llsync": "^1.7.5-beta",
+    "qcloud-iotexplorer-h5-panel-sdk": "^1.2.8",
+    "rimraf": "^3.0.2",
+    "vant": "3",
+    "vue": "^3.2.21",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@parcel/config-default": "^2.0.1",
+    "@parcel/core": "^2.0.1",
+    "@parcel/optimizer-data-url": "^2.5.0",
+    "@parcel/transformer-inline-string": "^2.5.0",
+    "@parcel/transformer-less": "^2.0.1",
+    "@parcel/transformer-vue": "^2.0.1",
+    "buffer": "^6.0.3",
+    "open": "^8.4.0",
+    "parcel": "^2.0.1",
+    "parcel-namer-rewrite": "^2.0.0-rc.2"
+  },
+  "parcel-namer-rewrite": {
+    "rules": {
+      "(index).css": "index.{hash}.css",
+      "(index).js": "index.{hash}.js"
+    },
+    "developmentDisable": true
+  },
+  "targets": {
+    "default": {
+      "context": "browser"
+    }
+  }
+}
