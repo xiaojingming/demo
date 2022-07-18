@@ -2,18 +2,19 @@
   <div class="layout">
     <button @click="handleToHome">to home</button>
     <button @click="handleToScenes">to scenes</button>
-    <van-icon
-      name="arrow"
-      color="#ccc"
-    />
+    <!-- <Test /> -->
     <router-view />
   </div>
 </template>
 <script>
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+// import Test from './Test.vue';
 
 export default defineComponent({
+  components: {
+    // Test,
+  },
   setup() {
     const router = useRouter();
     const handleToHome = () => {
